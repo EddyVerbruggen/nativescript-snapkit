@@ -15,8 +15,9 @@
 
 ## What!?
 Glad you asked. This repo implements a [NativeScript](https://naivescript.org) plugin for [Snapchat's Snap Kit SDK](https://kit.snapchat.com).
-In its first iteration, this plugin only exposes the 'login' feature, called [Login Kit](https://kit.snapchat.com/#login-kit).
-Feel free to open an issue requesting other features (other parts of the Snap Kit SDK are: Creative Kit, Bitmoji Kit, and Story Kit).
+In its first iteration, this plugin only exposes [Login Kit](https://kit.snapchat.com/#login-kit) (arguably the most relevant part of the Snap Kit SDK).
+
+> Feel free to open an issue requesting other features (other parts of the Snap Kit SDK are: Creative Kit, Bitmoji Kit, and Story Kit).
 
 ## Installation
 ```bash
