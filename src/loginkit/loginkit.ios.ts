@@ -5,7 +5,6 @@ export class SnapKitAppDelegate extends UIResponder implements UIApplicationDele
   public static ObjCProtocols = [UIApplicationDelegate];
 
   applicationOpenURLOptions(application, url, options): boolean {
-    console.log(">>> applicationOpenURLOptions 1, url: " + url);
     return SCSDKLoginClient.applicationOpenURLOptions(application, url, options);
   }
 }
@@ -43,7 +42,6 @@ export function login(fetchUserData?: boolean): Promise<TNSSnapKitLoginKitResult
     SCSDKLoginClient.loginFromViewControllerCompletion(
         app.ios.rootController,
         (loggedIn: boolean, error: NSError) => {
-          console.log(">>> x: " + loggedIn);
           if (error) {
             reject(error.localizedDescription);
           } else if (!loggedIn) {
@@ -65,12 +63,9 @@ export function logout(): Promise<any> {
 }
 
 function getUserData(resolve, reject): void {
-  console.log(">>> 0");
   const query = "{me{displayName, bitmoji{avatar}, externalId}}";
   const dic: any = NSMutableDictionary.new();
   dic.setObjectForKey("bitmoji", "page");
-
-  console.log(">>> 1");
 
   SCSDKLoginClient.fetchUserDataWithQueryVariablesSuccessFailure(
       query,
@@ -80,7 +75,6 @@ function getUserData(resolve, reject): void {
         const me: NSDictionary<any, any> = data.valueForKey("me");
         const bitmoji: NSDictionary<any, any> = me.valueForKey("bitmoji");
 
-        console.log(">>> 2");
         resolve(<TNSSnapKitLoginKitResult>{
           displayName: me.valueForKey("displayName"),
           externalId: me.valueForKey("externalId"),
