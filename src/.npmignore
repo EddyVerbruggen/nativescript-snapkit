@@ -1,8 +1,10 @@
 *.map
 *.ts
 !*.d.ts
+references.d.ts
 tsconfig.json
 scripts/*
+platforms/ios/typings
 platforms/android/*
 platforms/android_lib
 !platforms/android/include.gradle

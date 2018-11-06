@@ -2,7 +2,7 @@
   "nativescript": {
     "id": "org.nativescript.plugindemo.snapkit",
     "tns-android": {
-      "version": "4.2.1"
+      "version": "4.2.0"
     },
     "tns-ios": {
       "version": "4.2.0"
