@@ -6,17 +6,15 @@ export class HelloWorldModel extends Observable {
   public message: string = "Look at the console log for login results.";
 
   public isLoggedIn() {
-    LoginKit.isLoggedIn(true)
-        .then(result => {
-          console.log(">>> logged in?.. " + JSON.stringify(result));
-        });
+    // see the README for a more elaborate example, where you can retrieve user details
+    LoginKit.isLoggedIn()
+        .then(result => console.log(">>> logged in?.. " + result));
   }
 
   public login() {
     LoginKit.login(true)
-        .then(result => {
-          console.log(">>> logged in.. " + JSON.stringify(result));
-        });
+        .then(result => console.log(`Login successful, details: ${JSON.stringify(result)}`))
+        .catch(error => console.log(`Login failed. Details: ${error}`));
   }
 
   public logout() {
