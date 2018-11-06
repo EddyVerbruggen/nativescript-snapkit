@@ -1,0 +1,8 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" class="page">
+  <StackLayout class="p-20">
+    <Label text="{{ message }}" class="t-20 text-center c-black" textWrap="true"/>
+    <Button tap="{{ isLoggedIn }}" text="Logged in via Snap?"/>
+    <Button tap="{{ login }}" text="Snap login"/>
+    <Button tap="{{ logout }}" text="Snap logout"/>
+  </StackLayout>
+</Page>
