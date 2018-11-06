@@ -1,1 +1,1 @@
-export * from "./LoginKit"
+export * from "./loginkit";

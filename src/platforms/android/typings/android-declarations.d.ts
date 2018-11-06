@@ -1,4 +1,9 @@
-declare module native {	export class Array<T> {	constructor(); length: number; [index: number]: T; } }
+declare module native {
+  export class Array<T> {
+    constructor();
 
-import globalAndroid = android;
+    length: number;
 
+    [index: number]: T;
+  }
+}
